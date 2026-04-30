@@ -16,7 +16,22 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.tool_input.file_path // empty' | grep -q '\\.java$' && echo 'Java 파일 변경됨 — Eclipse에서 Maven > Update Project 필요할 수 있음' || true"
+            "command": "jq -r '.tool_input.file_path // empty' | grep -q '\\.java$' && echo 'Java 파일 변경됨 - Eclipse Maven > Update Project 필요할 수 있음' || true"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/PARK/Desktop/AMS/.claude/hooks/create-issue.sh",
+            "statusMessage": "브랜치 감지 - GitHub 이슈 확인 중..."
+          },
+          {
+            "type": "command",
+            "command": "/Users/PARK/Desktop/AMS/.claude/hooks/create-pr.sh",
+            "statusMessage": "push 감지 - GitHub PR 확인 중..."
           }
         ]
       }
