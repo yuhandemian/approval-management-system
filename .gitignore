@@ -4,11 +4,22 @@ maven_repository_4_3/
 # Build output
 **/target/
 
-# Eclipse
+# Eclipse workspace & project metadata
 .metadata/
+**/.metadata/
 **/.classpath
 **/.project
 **/.settings/
+**/.factorypath
+
+# Eclipse workspace Servers config
+workspace-egov/Servers/
+
+# Tomcat server
+apache-tomcat-9.0.89/
+
+# Sample (참조용 - git 불필요)
+egovframework.guide/
 
 # Mac
 .DS_Store
