@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git -C /Users/PARK/Desktop/AMS status --short"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | grep -q '\\.java$' && echo 'Java 파일 변경됨 — Eclipse에서 Maven > Update Project 필요할 수 있음' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
