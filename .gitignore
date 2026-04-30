@@ -21,5 +21,17 @@ apache-tomcat-9.0.89/
 # Sample (참조용 - git 불필요)
 egovframework.guide/
 
+# Log files
+*.log
+**/logs/
+
+# Local datasource override (DB 비밀번호 로컬 설정용)
+**/context-datasource-local.xml
+
+# IntelliJ
+.idea/
+*.iml
+
 # Mac
 .DS_Store
+**/.DS_Store
