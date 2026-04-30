@@ -1,0 +1,14 @@
+# Maven local repository
+maven_repository_4_3/
+
+# Build output
+**/target/
+
+# Eclipse
+.metadata/
+**/.classpath
+**/.project
+**/.settings/
+
+# Mac
+.DS_Store
